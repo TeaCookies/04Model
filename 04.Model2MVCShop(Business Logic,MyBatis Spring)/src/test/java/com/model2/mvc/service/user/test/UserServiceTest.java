@@ -144,6 +144,7 @@ public class UserServiceTest {
 		//==> API 확인
 		Assert.assertFalse( userService.checkDuplication("testUserId") );
 	 	Assert.assertTrue( userService.checkDuplication("testUserId"+System.currentTimeMillis()) );
+	 	//유니크한 값을 위해
 		 	
 	}
 	
