@@ -67,7 +67,7 @@ public class PurchaseServiceTest {
 		Assert.assertEquals("받는사람", purchase.getReceiverName());
 		Assert.assertEquals(10073, purchase.getPurchaseProd().getProdNo());
 		Assert.assertEquals("user18", purchase.getBuyer().getUserId());
-		Assert.assertEquals("19/04/23", purchase.getDivyDate());
+		Assert.assertEquals("19-04-23", purchase.getDivyDate());
 		Assert.assertEquals("1", purchase.getTranCode());
 	}
 	
@@ -84,7 +84,7 @@ public class PurchaseServiceTest {
 		//==> API 확인
 		Assert.assertEquals("체인지", purchase.getReceiverName());
 		Assert.assertEquals(10074, purchase.getPurchaseProd().getProdNo());
-		Assert.assertEquals("19/04/24", purchase.getDivyDate());
+		Assert.assertEquals("19-04-24", purchase.getDivyDate());
 		
 		Assert.assertNotNull(purchaseService.getPurchase(10061));
 		Assert.assertNotNull(purchaseService.getPurchase(10062));

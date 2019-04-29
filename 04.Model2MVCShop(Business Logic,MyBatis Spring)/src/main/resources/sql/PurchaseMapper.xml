@@ -32,7 +32,7 @@
 		INTO transaction ( tran_no, prod_no, buyer_id, payment_option, receiver_name, receiver_phone, 
 						demailaddr, dlvy_request, tran_status_code, order_data, dlvy_date ) 
 		VALUES	 (	seq_transaction_tran_no.nextval, #{purchaseProd.prodNo} , #{buyer.userId} , #{paymentOption} , #{receiverName} , #{receiverPhone} , 
-					#{divyAddr:VARCHAR} , #{divyRequest:VARCHAR} , #{tranCode} , SYSDATE , TO_DATE(#{divyDate:DATE},'YYYY-MM-DD') )
+					#{divyAddr:VARCHAR} , #{divyRequest:VARCHAR} , #{tranCode} , SYSDATE , #{divyDate:DATE} )
 	 </insert>
 	 
 	 
