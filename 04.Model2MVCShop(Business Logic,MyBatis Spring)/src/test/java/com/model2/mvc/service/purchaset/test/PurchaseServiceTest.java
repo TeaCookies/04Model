@@ -71,23 +71,23 @@ public class PurchaseServiceTest {
 		Assert.assertEquals("1", purchase.getTranCode());
 	}
 	
-	@Test	//==>확인
+	//@Test	//==>확인
 	public void testGetPurchase() throws Exception {
 		
 		Purchase purchase = new Purchase();
 		
-		purchase = purchaseService.getPurchase(10064);
+		purchase = purchaseService.getPurchase(10015);
 
 		//==> console 확인
 		System.out.println("\n :: console 확인 :: "+purchase);
 		
 		//==> API 확인
-		Assert.assertEquals("체인지", purchase.getReceiverName());
-		Assert.assertEquals(10074, purchase.getPurchaseProd().getProdNo());
-		Assert.assertEquals("19-04-24", purchase.getDivyDate());
+		Assert.assertEquals("SCOTT", purchase.getReceiverName());
+		Assert.assertEquals(10002, purchase.getPurchaseProd().getProdNo());
+		Assert.assertEquals(null, purchase.getDivyDate());
+		Assert.assertEquals("2019-05-01", purchase.getOrderDate().toString());
 		
-		Assert.assertNotNull(purchaseService.getPurchase(10061));
-		Assert.assertNotNull(purchaseService.getPurchase(10062));
+		Assert.assertNotNull(purchaseService.getPurchase(10014));
 	}
 	
 	

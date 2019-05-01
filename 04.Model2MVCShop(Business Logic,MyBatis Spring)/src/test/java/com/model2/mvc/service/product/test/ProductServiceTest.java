@@ -58,7 +58,7 @@ public class ProductServiceTest {
 		Assert.assertEquals("testProdFile", product.getFileName());
 	}
 	
-	@Test	//==>확인
+	//@Test	//==>확인
 	public void testGetProduct() throws Exception {
 		
 		Product product = new Product();
@@ -71,20 +71,21 @@ public class ProductServiceTest {
 //		user.setAddr("경기도");
 //		user.setEmail("test@test.com");
 		
-		product = productService.getProduct(10080);
+		product = productService.getProduct(10024);
 
 		//==> console 확인
 		System.out.println("\n :: console 확인 :: "+product);
 		
 		//==> API 확인
-		Assert.assertEquals("testProdName", product.getProdName());
-		Assert.assertEquals(999, product.getPrice());
-		Assert.assertEquals("19/04/23", product.getManuDate());
-		Assert.assertEquals("testProdDetail", product.getProdDetail());
-		Assert.assertEquals("testProdFile", product.getFileName());
+		Assert.assertEquals("마스크", product.getProdName());
+		Assert.assertEquals(1000, product.getPrice());
+		Assert.assertEquals("19/05/01", product.getManuDate());
+		Assert.assertEquals("미세먼지 마스크", product.getProdDetail());
+		Assert.assertEquals("11", product.getFileName());
+		Assert.assertEquals("2019-05-01", product.getRegDate().toString());
 
-		Assert.assertNotNull(productService.getProduct(10060));
-		Assert.assertNotNull(productService.getProduct(10061));
+		Assert.assertNotNull(productService.getProduct(10008));
+		Assert.assertNotNull(productService.getProduct(10010));
 	}
 	
 	 //@Test	//==>확인
@@ -123,7 +124,7 @@ public class ProductServiceTest {
 	 
 
 	 //==>  주석을 풀고 실행하면....
-	 @Test	//==>확인
+	// @Test	//==>확인
 	 public void testGetProductListAll() throws Exception{
 		 
 	 	Search search = new Search();
